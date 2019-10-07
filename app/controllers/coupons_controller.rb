@@ -12,6 +12,8 @@ class CouponsController < ApplicationController
   
   def create 
     @coupon = Coupon.new
-    @coupon.
+    @coupon.coupon_code = params[:coupon][:coupon_code]
+    @coupon.store = params[:coupon][:store]
+    @coupon.save
   end 
 end 
